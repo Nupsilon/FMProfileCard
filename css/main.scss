@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+:root {
+    --primary-blue: hsl(185, 75%, 39%);
+    --primary-dark-blue: hsl(229, 23%, 23%);
+    --primary-gray-blue: hsl(227, 10%, 46%);
+    --neutral-dark-gray: hsl(0, 0%, 59%);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--primary-blue);
+    font-family: "Kumbh Sans";
+}
+
+.attribution {
+    display: none;
+    font-size: 11px; text-align: center;
+     
+    a { 
+        color: hsl(228, 45%, 44%);
+    }
+}
+
+.bg-top, .bg-bottom {
+    height: 300px;
+    width: 300px;
+    background-size: contain;
+    position: fixed;
+    z-index: 1;
+    opacity: 0.8;
+}
+
+.bg-top {
+    background: url(../images/bg-pattern-top.svg) no-repeat;
+    top: 0;
+    left: 0;
+    background-position: right bottom;
+}
+
+.bg-bottom {
+    background: url(../images/bg-pattern-bottom.svg) no-repeat;
+    right: 0;
+    bottom: 0;
+    background-position: left top;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card-header {
+    width: 350px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 15px 15px 0 0;
+    background: url(../images/bg-pattern-card.svg) center;
+    background-size: cover;
+    z-index: 2;
+}
+
+.card {
+    width: 350px;
+    height: 250px;
+    margin: 0 auto;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 15px 15px;
+    z-index: 2;
+
+    p {
+        text-align: center;
+        color: var(--primary-gray-blue);
+    }
+}
+
+.top-row {
+    height: 150px;
+    border-bottom: 0.5px solid var(--neutral-dark-gray);
+    width: 100%;
+    margin-top: .7em;
+}
+
+.bottom-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    padding: 0 2em;
+    margin: 1.5em 0;
+}
+
+img {
+    border: 6px solid white;
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+    margin-top: -3.5em;
+}
+
+.social {
+    padding: 1.5em;
+}
+
+.identity, .number {
+    font-size: 18px;
+}
+
+strong {
+    font-weight: 700;
+    color: var(--primary-dark-blue);
+}
+
+.city {
+    font-size: .9em;
+    padding-top: 0;
+    margin-top: .9em;
+}
+
+.type-social {
+    font-size: .7em;
+    padding-top: 0;
+    margin-top: .6em;
+}
+
+.number, .identity {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+#name {
+    padding-right: .3em;
+}
+
+@media only screen and (min-width: 1080px) {
+    
+    .bg-top, .bg-bottom {
+        width: 600px;
+        height: 400px;
+    }
+}
